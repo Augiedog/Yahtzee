@@ -1,0 +1,110 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+}
+p {
+    color: navy;
+    text-indent: 30px;
+    line-height: 2;
+}
+button {
+    font-size: 1.5em;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+header {
+    width: 85%;
+    margin: 0 auto;
+    background-color: darkcyan;
+    border-radius: 25px;
+    text-align: center;
+    vertical-align: 150px;
+    color: whitesmoke;
+}
+.container {
+    width: 95%;
+    text-align: center;
+    vertical-align: 150px;
+    margin: 0 auto;
+    background-color: powderblue;
+    border-radius: 25px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    
+}
+.wrapper {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+aside {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+aside > div {
+    width: 22%;
+    background: red;
+    margin: 2vw;
+}
+  
+main {
+    border: 20px dotted rebeccapurple;
+    box-sizing: border-box;
+    flex-grow: 4;
+}
+  
+  
+@media (min-width: 600px) {
+    .wrapper {
+      flex-direction: row;
+    }
+    aside {
+      width: 80%;
+      flex: 4;
+      align-items: center;
+      margin-right: 1em;
+    }
+    aside > div {
+      height: 10em;
+    }
+  
+    main {
+      flex: 2;
+    }
+}
+
+.print {
+    width: 1fr;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+.contactMe {
+    background-color: lawngreen;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    border-style: dashed;
+    border-radius: 25px;
+}
+
+ul {
+    list-style-type: decimal-leading-zero;
+    width: 50%;
+    text-align: left;
+}
+img {
+    height: auto;
+    padding: 15px;
+    border-radius: .5px;
+}
