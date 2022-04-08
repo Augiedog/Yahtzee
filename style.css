@@ -84,25 +84,6 @@ main {
     }
 }
 
-.print {
-    width: 1fr;
-    margin: 0 auto;
-    border-radius: 30px;
-}
-.contactMe {
-    background-color: lawngreen;
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
-    border-style: dashed;
-    border-radius: 25px;
-}
-
-ul {
-    list-style-type: decimal-leading-zero;
-    width: 50%;
-    text-align: left;
-}
 img {
     height: auto;
     padding: 15px;
