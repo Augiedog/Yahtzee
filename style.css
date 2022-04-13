@@ -16,6 +16,12 @@ button {
     margin-right: 10px;
     border-radius: 10px;
 }
+#roll {
+    background: linear-gradient(to bottom left, lightblue, white);
+}
+#roll:hover {
+    background: linear-gradient(to bottom left, darkblue, lightblue);
+}
 header {
     width: 85%;
     margin: 0 auto;
@@ -52,8 +58,9 @@ aside {
     justify-content: space-between;
     flex-grow: 1;
 }
-aside > div {
-    width: 22%;
+aside > img {
+    width: 15%;
+    padding: 15px;
     /* background: red; */
     margin: 2vw;
 }
@@ -82,10 +89,4 @@ main {
     main {
       flex: 2;
     }
-}
-
-img {
-    height: auto;
-    padding: 15px;
-    border-radius: .5px;
 }
