@@ -66,11 +66,18 @@ aside > img {
 }
   
 main {
-    border: 20px groove rebeccapurple;
-    box-sizing: border-box;
+    border: 2px groove rebeccapurple; 
+    box-sizing: border-box; 
     flex-grow: 4;
 }
-  
+table, 
+th, 
+td {
+    border: 5px groove rebeccapurple;
+    margin: 0 auto;
+    padding: 5px;
+    font-weight: bold;
+}
   
 @media (min-width: 600px) {
     .wrapper {
