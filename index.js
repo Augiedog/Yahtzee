@@ -31,33 +31,33 @@ let tbody = document.createElement('tbody');
 table.appendChild(thead);
 table.appendChild(tbody);
 
-function scoreBoard(tbRow, tbCol, data) {
-    let (tbRow) = document.createElement('tr');
-    let (tbCol) = document.createElement('th');
-    data.innerHTML = `${data}`;
-        return tbRow.appendChild(tbCol), thead.appendChild(tbRow);
-}
-scoreBoard('row_1', 'heading_1', "Upper Section");
-scoreBoard('row_1', 'heading_2', "How to Score");
-scoreBoard('row_1', 'heading_2', "Game#1");
-scoreBoard('row_1', 'heading_2', "Game#2");
+// function scoreBoard(tbRow, tbCol, data) {
+//     let (tbRow) = document.createElement('tr');
+//     let (tbCol) = document.createElement('th');
+//     data.innerHTML = `${data}`;
+//         return tbRow.appendChild(tbCol), thead.appendChild(tbRow);
+// }
+// scoreBoard('row_1', 'heading_1', "Upper Section");
+// scoreBoard('row_1', 'heading_2', "How to Score");
+// scoreBoard('row_1', 'heading_2', "Game#1");
+// scoreBoard('row_1', 'heading_2', "Game#2");
 
 // Creating and adding data to first row of the table
-// let row_1 = document.createElement('tr');
-// let heading_1 = document.createElement('th');
-// heading_1.innerHTML = "Upper Section";
-// let heading_2 = document.createElement('th');
-// heading_2.innerHTML = "How to Score";
-// let heading_3 = document.createElement('th');
-// heading_3.innerHTML = "Game#1";
-// let heading_4 = document.createElement('th');
-// heading_4.innerHTML = "Game#2";
+let row_1 = document.createElement('tr');
+let heading_1 = document.createElement('th');
+heading_1.innerHTML = "Upper Section";
+let heading_2 = document.createElement('th');
+heading_2.innerHTML = "How to Score";
+let heading_3 = document.createElement('th');
+heading_3.innerHTML = "Game#1";
+let heading_4 = document.createElement('th');
+heading_4.innerHTML = "Game#2";
 
-// row_1.appendChild(heading_1);
-// row_1.appendChild(heading_2);
-// row_1.appendChild(heading_3);
-// row_1.appendChild(heading_4);
-// thead.appendChild(row_1);
+row_1.appendChild(heading_1);
+row_1.appendChild(heading_2);
+row_1.appendChild(heading_3);
+row_1.appendChild(heading_4);
+thead.appendChild(row_1);
 
 // Creating and adding data to second row of the table
 let row_2 = document.createElement('tr');
