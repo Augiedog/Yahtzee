@@ -60,19 +60,17 @@ aside {
 }
 aside > img {
     width: 15%;
-    padding: 15px;
+    padding: .5px;
     /* background: red; */
-    margin: 2vw;
+    margin: .5vw;
 }
   
 main {
     border: 2px groove rebeccapurple; 
     box-sizing: border-box; 
-    flex-grow: 4;
+    flex-grow: 2;
 }
-table, 
-th, 
-td {
+table, th, td {
     border: 5px groove rebeccapurple;
     margin: 0 auto;
     padding: 5px;
