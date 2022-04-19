@@ -2,7 +2,7 @@ let playArea = document.querySelector('#play-area')
 
 function Dice(url){
     let image = document.createElement('img')
-    image.src = `./assets/dice/dice${url}.png`
+    image.src = `./dice${url}.png`
     playArea.append(image)
     return image
 }
