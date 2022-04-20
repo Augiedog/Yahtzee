@@ -19,9 +19,9 @@ function Dice(url){
 
 // Roll Button 
 document.getElementById('roll').addEventListener('click', () => {
-    const dice = ['dice1', 'dice2', 'dice3', 'dice4', 'dice5']
-    for (let i = 0; i < dice.length; i++) {
+    for (let i = 0; i < 5; i++) {
         let rolledValue = Math.ceil(Math.random() * 6)
+        // callBack funtion creats the image of a dice
         Dice(rolledValue)
     }
         
@@ -30,8 +30,8 @@ document.getElementById('roll').addEventListener('click', () => {
 function newInventory(){
     let inventory = document.querySelector('#hand')
     inventory.style.position = 'fixed'
-    inventory.style.bottom = '0px';
-    inventory.style.left = '35px'
+    inventory.style.bottom = '75px';
+    inventory.style.left = '100px'
     inventory.style.width = '48%'
     inventory.style.height = '100px'
     inventory.style.display = 'flex'

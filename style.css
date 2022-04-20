@@ -17,10 +17,13 @@ button {
     border-radius: 10px;
 }
 #roll {
-    background: linear-gradient(to bottom left, lightblue, white);
+    background: linear-gradient(to bottom left, rgb(63, 196, 10), white);
 }
 #roll:hover {
-    background: linear-gradient(to bottom left, darkblue, lightblue);
+    background: linear-gradient(to bottom left, rgb(233, 92, 92), lightblue);
+}
+img:hover {
+    border: 5px rebeccapurple;
 }
 header {
     width: 85%;
