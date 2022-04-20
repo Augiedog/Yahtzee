@@ -58,7 +58,7 @@ aside {
     justify-content: space-between;
     flex-grow: 1;
 }
-aside > img {
+img {
     width: 15%;
     padding: .5px;
     /* background: red; */
@@ -66,14 +66,13 @@ aside > img {
 }
   
 main {
-    border: 2px groove rebeccapurple; 
     box-sizing: border-box; 
     flex-grow: 2;
 }
 table, th, td {
-    border: 5px groove rebeccapurple;
+    border: 1px groove rebeccapurple;
     margin: 0 auto;
-    padding: 5px;
+    padding: .5px;
     font-weight: bold;
 }
   
