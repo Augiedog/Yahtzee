@@ -14,7 +14,6 @@ function Dice(url){
         inventoryItem.src = `./dice${url}.png`;
         inventoryItem.alt = `Dice ${url}`
         inventoryItem.id = url
-        inventoryItem.className = 'dice'
         inventoryItem.addEventListener('click', () => {
             inventoryItem.remove()
             playArea.append(image)
@@ -45,9 +44,10 @@ document.getElementById('roll').addEventListener('click', () => {
     }   
     diceCount()
 })
+
 // temp button that removes dice
 document.getElementById('pick-up').addEventListener('click', () => {
-    let die = document.querySelector('.dice')
-    die.remove()
+    document.querySelector('.dice').remove()
     dice--
+    diceCount()
 })
