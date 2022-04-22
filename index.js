@@ -47,6 +47,7 @@ document.getElementById('roll').addEventListener('click', () => {
 })
 // temp button that removes dice
 document.getElementById('pick-up').addEventListener('click', () => {
-    document.querySelector('#dice').remove()
+    let die = document.querySelector('#dice')
+    die.remove()
     dice--
 })
