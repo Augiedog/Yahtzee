@@ -53,13 +53,26 @@ header {
     display: flex;
     flex-direction: column;
 }
-aside {
+#play-area {
     width: 100%;
     min-height: 200px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-grow: 1;
+}
+#hand {
+    border: 1px groove rebeccapurple;
+    background-color: aquamarine;
+    width: 48%;
+    max-height: 120px;
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 img {
     width: 15%;
@@ -83,14 +96,14 @@ table, th, td {
     .wrapper {
       flex-direction: row;
     }
-    aside {
+    #play-area {
       width: 80%;
       flex: 4;
       align-items: center;
       margin-right: 1em;
     }
-    aside > div {
-      height: 10em;
+    #hand {
+      height: 25%;
     }
   
     main {
