@@ -64,7 +64,7 @@ header {
 #hand {
     border: 1px groove rebeccapurple;
     background-color: aquamarine;
-    width: 48%;
+    width: 50%;
     max-height: 120px;
     position: absolute;
     bottom: 50px;
