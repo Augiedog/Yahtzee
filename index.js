@@ -26,10 +26,11 @@ function Dice(url){
 
 function diceCount() {
     var diceLimit = 5
+    document.getElementById('total').textContent = dice
     if (dice > diceLimit) {
         // trying to remove the dice in the play area and; roll the amount left in the play area
         // document.querySelector(div.img).remove(dice-diceLimit)
-        alert(`More than 5 dice!!`)
+        console.log(`More than 5 dice!!`)
     } 
 }
 
