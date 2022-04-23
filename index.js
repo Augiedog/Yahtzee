@@ -7,6 +7,7 @@ function Dice(url){
     image.src = `./dice${url}.png`
     image.alt = `Dice ${url}`
     image.id = url
+    image.className = 'dice'
     image.addEventListener('click', () => {
         image.remove()
         let inventoryItem = document.createElement('img')
@@ -25,10 +26,11 @@ function Dice(url){
 
 function diceCount() {
     var diceLimit = 5
+    document.getElementById('total').textContent = dice
     if (dice > diceLimit) {
         // trying to remove the dice in the play area and; roll the amount left in the play area
         // document.querySelector(div.img).remove(dice-diceLimit)
-        alert(`More than 5 dice!!`)
+        console.log(`More than 5 dice!!`)
     } 
 }
 
@@ -44,3 +46,9 @@ document.getElementById('roll').addEventListener('click', () => {
     diceCount()
 })
 
+// temp button that removes dice
+document.getElementById('pick-up').addEventListener('click', () => {
+    document.querySelector('.dice').remove()
+    dice--
+    diceCount()
+})
