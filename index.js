@@ -3,7 +3,7 @@ let hand = document.querySelector('#hand')
 let dice = 0
 let dieInHand = []
 
-function Dice(diceVal){
+function Dice(diceVal) {
     let image = document.createElement('img')
     image.src = `./dice${diceVal}.png`
     image.alt = `Dice side ${diceVal} `
