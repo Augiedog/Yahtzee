@@ -26,7 +26,7 @@ function Dice(diceVal){
     playArea.append(image)
     return image
 }
-
+// Removes the value of the dice from the array
 function removeDieValue(val) {
     for (let i = 0; i < dieInHand.length; i++) {
         if (val === dieInHand[i]) {
@@ -47,6 +47,11 @@ function diceCount() {
 
 // Roll Button 
 document.getElementById('roll').addEventListener('click', () => { 
+    document.querySelector('#chance').textContent = dieInHand
+    document.querySelectorAll('.play-dice').forEach(die => {
+        die.remove()
+        dice--
+    })
     while ( dice < 5) {
         let rolledValue = Math.ceil(Math.random() * 6)
         // callBack funtion creats the image of a dice with it's properties
@@ -57,19 +62,19 @@ document.getElementById('roll').addEventListener('click', () => {
 })
 
 // temp button that removes dice from play-area
-document.getElementById('pick-up').addEventListener('click', () => {
-    document.querySelector('#chance').textContent = dieInHand
-    document.querySelectorAll('.play-dice').forEach( die => {
-        die.remove()
-        dice--
-    })
-    // while ( dice > 0) {
-    //     document.querySelector('.dice').remove()
-    //     dice--
-    //     diceCount()
-    // }  
-    diceCount()
-})
+// document.getElementById('pick-up').addEventListener('click', () => {
+//     // document.querySelector('#chance').textContent = dieInHand
+//     // document.querySelectorAll('.play-dice').forEach(die => {
+//     //     die.remove()
+//     //     dice--
+//     // })
+//     // while ( dice > 0) {
+//     //     document.querySelector('.dice').remove()
+//     //     dice--
+//     //     diceCount()
+//     // }  
+//     diceCount()
+// })
 
 
 // Score board Functionality
