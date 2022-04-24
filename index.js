@@ -1,33 +1,47 @@
 let playArea = document.querySelector('#play-area')
-let hold = document.querySelector('#hand')
+let hand = document.querySelector('#hand')
 let dice = 0
+let dieInHand = []
 
-function Dice(url){
+function Dice(diceVal){
     let image = document.createElement('img')
-    image.src = `./dice${url}.png`
-    image.alt = `Dice side ${url} `
-    image.id = url
-    image.className = 'dice'
+    image.src = `./dice${diceVal}.png`
+    image.alt = `Dice side ${diceVal} `
+    image.id = 'Dice'
+    image.className = 'play-dice'
     image.addEventListener('click', () => {
         image.remove()
+        dieInHand.push(diceVal)
         let inventoryItem = document.createElement('img')
-        inventoryItem.src = `./dice${url}.png`;
-        inventoryItem.alt = `Dice side ${url}`
-        inventoryItem.id = url
+        inventoryItem.src = `./dice${diceVal}.png`;
+        inventoryItem.alt = `Dice side ${diceVal}`
+        inventoryItem.id = 'Dice'
         inventoryItem.addEventListener('click', () => {
             inventoryItem.remove()
             playArea.append(image)
+            removeDieValue(diceVal)
         })
-        hold.append(inventoryItem)
+        hand.append(inventoryItem)
     })
     playArea.append(image)
     return image
 }
 
+function removeDieValue(val) {
+    for (let i = 0; i < dieInHand.length; i++) {
+        if (val === dieInHand[i]) {
+            dieInHand.splice(i,1)
+            break
+        }
+    }
+}
+
 function diceCount() {
     var diceLimit = 5
+    document.querySelector('#total-score').textContent = dice
+    
     if (dice > diceLimit) {
-        alert(`More than 5 dice!!`)
+        alert(`You have more than 5 dice in Play!!`)
     } 
 }
 
@@ -42,10 +56,18 @@ document.getElementById('roll').addEventListener('click', () => {
     diceCount()
 })
 
-// temp button that removes dice
+// temp button that removes dice from play-area
 document.getElementById('pick-up').addEventListener('click', () => {
-    document.querySelector('.dice').remove()
-    dice--
+    document.querySelector('#chance').textContent = dieInHand
+    document.querySelectorAll('.play-dice').forEach( die => {
+        die.remove()
+        dice--
+    })
+    // while ( dice > 0) {
+    //     document.querySelector('.dice').remove()
+    //     dice--
+    //     diceCount()
+    // }  
     diceCount()
 })
 
