@@ -5,14 +5,14 @@ let dice = 0
 function Dice(url){
     let image = document.createElement('img')
     image.src = `./dice${url}.png`
-    image.alt = `Dice ${url}`
+    image.alt = `Dice side ${url} `
     image.id = url
     image.className = 'dice'
     image.addEventListener('click', () => {
         image.remove()
         let inventoryItem = document.createElement('img')
         inventoryItem.src = `./dice${url}.png`;
-        inventoryItem.alt = `Dice ${url}`
+        inventoryItem.alt = `Dice side ${url}`
         inventoryItem.id = url
         inventoryItem.addEventListener('click', () => {
             inventoryItem.remove()
@@ -26,22 +26,18 @@ function Dice(url){
 
 function diceCount() {
     var diceLimit = 5
-    document.getElementById('total').textContent = dice
     if (dice > diceLimit) {
-        // trying to remove the dice in the play area and; roll the amount left in the play area
-        // document.querySelector(div.img).remove(dice-diceLimit)
-        console.log(`More than 5 dice!!`)
+        alert(`More than 5 dice!!`)
     } 
 }
 
 // Roll Button 
-document.getElementById('roll').addEventListener('click', () => {
-    for ( i = 0; i < 5; i++) {
+document.getElementById('roll').addEventListener('click', () => { 
+    while ( dice < 5) {
         let rolledValue = Math.ceil(Math.random() * 6)
-        // callBack funtion creats the image of a dice
+        // callBack funtion creats the image of a dice with it's properties
         Dice(rolledValue)
         dice++
-        
     }   
     diceCount()
 })
@@ -52,3 +48,9 @@ document.getElementById('pick-up').addEventListener('click', () => {
     dice--
     diceCount()
 })
+
+
+// Score board Functionality
+// let chance = 
+// // print score to chance square
+// getElementById('chance').textContent = chance
