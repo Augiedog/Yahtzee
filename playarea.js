@@ -59,3 +59,5 @@ document.getElementById('roll').addEventListener('click', () => {
     }   
     diceCount()
 })
+
+// Roll limits and turn base play

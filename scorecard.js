@@ -1,4 +1,4 @@
-//Declare Var
+//Declare Vars; connects to scorecard
 let acesCount = document.getElementById('Aces-Count')
 let twosCount = document.getElementById('Twos-Count')
 let threesCount = document.getElementById('Threes-Count')
@@ -18,8 +18,8 @@ let totalScore = document.getElementById('total-score')
 
 
 function ScoreCard(dieInHand) {
-    
-    
+    // need to fill the Score Card
+
     chance.textContent = dieInHand.reduce((a, b) => a + b, 0)
     
 
