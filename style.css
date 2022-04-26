@@ -23,12 +23,13 @@ button {
     background: linear-gradient(to bottom left, rgb(233, 92, 92), lightblue);
 }
 img:hover {
-    border: 5px rebeccapurple;
+    border: 5px solid blue;
+    border-radius: 10px;
 }
 header {
     width: 85%;
     margin: 0 auto;
-    background-color: darkcyan;
+    background-color: #ab0f0c;
     border-radius: 25px;
     text-align: center;
     vertical-align: 150px;
@@ -39,7 +40,8 @@ header {
     text-align: center;
     vertical-align: 150px;
     margin: 0 auto;
-    background-color: powderblue;
+    background-color: #0e8a35;
+    border: 20px groove #ab0f0c;
     border-radius: 25px;
     display: flex;
     min-height: 100vh;
@@ -63,7 +65,7 @@ header {
 }
 #hand {
     border-radius: 25px;
-    background-color: darkcyan;
+    background-color: #ab0f0c;
     width: 50%;
     max-height: 120px;
     position: absolute;
