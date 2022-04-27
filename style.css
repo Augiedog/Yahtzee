@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: #ffffff00;
     color: rgb(0, 0, 0);
 }
 p {
@@ -17,20 +17,23 @@ button {
     border-radius: 10px;
 }
 #roll {
-    background: linear-gradient(to bottom left, rgb(63, 196, 10), white);
+    background: linear-gradient(to bottom left, #3fc40a, white);
 }
 #roll:hover {
-    background: linear-gradient(to bottom left, rgb(233, 92, 92), lightblue);
+    background: linear-gradient(to bottom left, #e95c5c, lightblue);
 }
 img:hover {
-    border: 5px rebeccapurple;
+    border: 5px solid blue;
+    border-radius: 10px;
 }
 header {
     width: 85%;
     margin: 0 auto;
-    background-color: darkcyan;
+    background-color: #bb100d;
+    border: 10px groove #ab0f0c;
     border-radius: 25px;
     text-align: center;
+    margin-top: 5px;
     vertical-align: 150px;
     color: whitesmoke;
 }
@@ -39,7 +42,8 @@ header {
     text-align: center;
     vertical-align: 150px;
     margin: 0 auto;
-    background-color: powderblue;
+    background-color: #0e8a35;
+    border: 20px groove #ab0f0c;
     border-radius: 25px;
     display: flex;
     min-height: 100vh;
@@ -63,12 +67,12 @@ header {
 }
 #hand {
     border-radius: 25px;
-    background-color: darkcyan;
+    background-color: #ab0f0c;
     width: 50%;
-    max-height: 120px;
+    max-height: 100px;
     position: absolute;
-    bottom: 50px;
-    left: 100px;
+    bottom: 40px;
+    left: 110px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

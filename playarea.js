@@ -21,6 +21,7 @@ function Dice(diceVal) {
             inventoryItem.remove()
             playArea.append(image)
             removeDieValue(diceVal)
+            ScoreCard(dieInHand)
         })
         hand.append(inventoryItem)
     })
