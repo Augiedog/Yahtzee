@@ -16,6 +16,9 @@ let chance = document.getElementById('Chance')
 let yatzeeBonus = document.getElementById('Extra-Yatzee')
 let totalScore = document.getElementById('total-score')
 
+// function countAces(die) {
+//     return die > dieInHand.value
+// }
 
 function ScoreCard(dieInHand) {
     // need to fill the Score Card
@@ -24,6 +27,7 @@ function ScoreCard(dieInHand) {
     //     aces.reduce
     //     return 
     // }
+    // acesCount.textContent = dieInHand.filter(countAces)
 
     for ( let i = 0; i < dieInHand.length; i++) {
         if (dieInHand[i] === 1) {
