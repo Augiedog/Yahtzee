@@ -17,34 +17,33 @@ button {
     border-radius: 10px;
 }
 #roll {
-    background: linear-gradient(to bottom left, #3fc40a, white);
+    background: linear-gradient(to bottom left, #5FABC5, white);
 }
 #roll:hover {
-    background: linear-gradient(to bottom left, #e95c5c, lightblue);
+    background: linear-gradient(to bottom left,  #FAA613, #A10702);
 }
 img:hover {
-    border: 5px solid blue;
+    border: 5px solid #5FABC5;
     border-radius: 10px;
 }
 header {
     width: 85%;
     margin: 0 auto;
-    background-color: #bb100d;
-    border: 10px groove #ab0f0c;
+    background-color: #45433C;
+    border: 10px solid #5FABC5;
     border-radius: 25px;
     text-align: center;
     margin-top: 5px;
     vertical-align: 150px;
-    color: whitesmoke;
+    color: #EFECE6;
 }
 .container {
     width: 95%;
     text-align: center;
     vertical-align: 150px;
     margin: 0 auto;
-    background-color: #0e8a35;
-    border: 20px groove #ab0f0c;
-    border-radius: 25px;
+    background-color: #F7D928;
+    border: 10px groove #ab0f0c;
     display: flex;
     min-height: 100vh;
     justify-content: stretch;
@@ -67,7 +66,7 @@ header {
 }
 #hand {
     border-radius: 25px;
-    background-color: #ab0f0c;
+    background-color: #45433C;
     width: 50%;
     max-height: 100px;
     position: absolute;
@@ -90,6 +89,7 @@ main {
 }
 table, th, td {
     border: 1px groove rebeccapurple;
+    background-color: #EFECE6;
     margin: 0 auto;
     padding: .5px;
     font-weight: bold;
