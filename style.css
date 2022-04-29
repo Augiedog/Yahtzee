@@ -23,7 +23,7 @@ button {
     background: linear-gradient(to bottom left,  #FAA613, #A10702);
 }
 img:hover {
-    border: 5px solid #5FABC5;
+    border: 5px solid #ab0f0c;
     border-radius: 10px;
 }
 header {
@@ -82,7 +82,10 @@ img {
     padding: .5px;
     margin: .5vw;
 }
-  
+#play-area > img {
+    animation: rollDice;
+    animation-duration: 1s;
+}  
 main {
     box-sizing: border-box; 
     flex-grow: 2;
@@ -94,7 +97,15 @@ table, th, td {
     padding: .5px;
     font-weight: bold;
 }
-  
+
+@keyframes rollDice {
+    0% {transform: rotate(0deg); transform-origin: 20% 40%}
+    20% {transform: rotate(90deg)}
+    50% {transform: rotate(-180deg); transform-origin: 40% 20%;}
+    75% {transform: rotate(270deg)}
+    100% {transform: rotate(360deg); transform-origin: 60% 30%;}
+}
+
 @media (min-width: 600px) {
     .wrapper {
       flex-direction: row;
