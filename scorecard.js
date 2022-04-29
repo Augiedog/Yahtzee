@@ -1,4 +1,4 @@
-//Declare Vars; connects to scorecard
+//Declare Vars; connects to scorecard; writes in score 
 let acesCount = document.getElementById('Aces-Count')
 acesCount.addEventListener('click', () => {
     aces = false
@@ -37,6 +37,7 @@ let smallStraight = document.getElementById('small-Straight')
 let largeStraight = document.getElementById('large-Straight')
 let yatzee = document.getElementById('Yatzee')
 let chance = document.getElementById('Chance')
+// Add event listner here 
 let yatzeeBonus = document.getElementById('Extra-Yatzee')
 let totalScore = document.getElementById('total-score')
 
@@ -46,6 +47,8 @@ let threes = true
 let fours = true
 let fives = true
 let sixes = true
+
+let chance = true
 
 function ScoreCard(dieInHand) {
     // need to fill the Score Card
