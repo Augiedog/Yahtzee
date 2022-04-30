@@ -33,6 +33,12 @@ button {
 #howtobut:hover {
     background: linear-gradient(to bottom left, #2d2ddf, #30db30);
 }
+#aboutbut {
+    background: linear-gradient(to bottom left, #5FABC5, white);
+}
+#aboutbut:hover {
+    background: linear-gradient(to bottom left, green, yellow);
+}
 
 header {
     width: 85%;
@@ -134,7 +140,7 @@ table, th, td {
     grid-template-columns: 1fr 1fr;
   }
   .directions > div {
-      margin: 0 20px;
+    margin: 0 20px;
   }
   .about-game {
     display: none; 
@@ -158,6 +164,9 @@ table, th, td {
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .aboutmkr > div {
+    margin: 0 20px;
   }
   .close {
     color: #aaaaaa;

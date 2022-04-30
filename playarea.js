@@ -65,22 +65,25 @@ document.getElementById('roll').addEventListener('click', () => {
 
 
 // Get the 'How to Play' modal
-let howtomodal = document.getElementById("howToPlay")
-let hpbtn = document.getElementById("howtobut")
-let span = document.getElementsByClassName("close")[0]
+let howtomodal = document.getElementById('howToPlay')
+let hpbtn = document.getElementById('howtobut')
 hpbtn.onclick = function() {
   howtomodal.style.display = "block"
 }
-// about modal
+//Get the  'About' modal
 let aboutmodal = document.getElementById('About')
 let abbtn = document.getElementById('aboutbut')
 abbtn.onclick = function() {
     aboutmodal.style.display = "block"
 }
-// closes 
+// closes
+let span = document.getElementsByClassName('close')[0]
+let span2 = document.getElementsByClassName('close')[1] 
 span.onclick = function() {
   howtomodal.style.display = "none";
-  aboutmodal.style.display = "none";
+}
+span2.onclick = function() {
+    aboutmodal.style.display = "none";
 }
 window.onclick = function(event) {
   if (event.target == howtomodal) {

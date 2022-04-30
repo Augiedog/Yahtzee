@@ -63,39 +63,31 @@ function ScoreCard(dieInHand) {
     let countFours = 0
     let countFives = 0
     let countSixes = 0
-    let countBonus = 0
 
     for ( let i = 0; i < dieInHand.length; i++) {
         if (dieInHand[i] === 1 && aces !== false) {
             countAces += dieInHand[i]
             acesCount.textContent = countAces
-            countAces += countBonus
         } else 
         if (dieInHand[i] === 2 && twos !== false) {
             countTwos += dieInHand[i]
             twosCount.textContent = countTwos
-            countTwos += countBonus
         } else
         if (dieInHand[i] === 3 && threes !== false) {
             countThrees += dieInHand[i]
             threesCount.textContent = countThrees
-            countThrees += countBonus
         } else
         if (dieInHand[i] === 4 && fours !== false) {
             countFours += dieInHand[i]
             foursCount.textContent = countFours
-            countFours += countBonus
         } else
         if (dieInHand[i] === 5 && fives !== false) {
             countFives += dieInHand[i]
             fivesCount.textContent = countFives
-            countFives += countBonus
         } else
         if (dieInHand[i] === 6 && sixes !== false) {
             countSixes += dieInHand[i]
             sixesCount.textContent = countSixes
-            countSixes += countBonus
-            console.log(countBonus)
         }        
     }
     if ( countBonus > 63 ) {
