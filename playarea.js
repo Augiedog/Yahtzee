@@ -64,9 +64,9 @@ document.getElementById('roll').addEventListener('click', () => {
 // Roll limits and turn base play
 
 
-// Get the How to Play modal
+// Get the 'How to Play' modal
 let modal = document.getElementById("howToPlay");
-let btn = document.getElementById("how-to-play");
+let btn = document.getElementById("howtobut");
 let span = document.getElementsByClassName("close")[0]; 
 btn.onclick = function() {
   modal.style.display = "block";

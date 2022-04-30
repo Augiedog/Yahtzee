@@ -8,11 +8,13 @@ body {
 }
 h2 {
     text-align: left;
-    line-height: 4;
+    line-height: 2;
 }
 p {
+    text-align: justify;
     text-indent: 30px;
     line-height: 2;
+    font-size: large;
 }
 button {
     font-size: 1.5em;
@@ -25,11 +27,11 @@ button {
 #roll:hover {
     background: linear-gradient(to bottom left,  #FAA613, #A10702);
 }
-#how-to-play {
+#howtobut {
     background: linear-gradient(to bottom left, #5FABC5, white);
 }
-#how-to-play:hover {
-    background: linear-gradient(to bottom left, blue, green);
+#howtobut:hover {
+    background: linear-gradient(to bottom left, #2d2ddf, #30db30);
 }
 
 header {
@@ -121,7 +123,6 @@ table, th, td {
     background-color: #000000; /* Fallback color */
     background-color: #00000066; /* Black w/ opacity */
   }
-  /* Modal Content */
   .directions {
     background-color: #fefefe;
     color: navy;
@@ -129,8 +130,13 @@ table, th, td {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  /* The Close Button */
+  .directions > div {
+      margin: 0 20px;
+      
+  }
   .close {
     color: #aaaaaa;
     float: right;
