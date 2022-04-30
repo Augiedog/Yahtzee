@@ -30,16 +30,21 @@ sixesCount.addEventListener('click', () => {
     sixesCount.style.backgroundColor = 'red'
 })
 let bonus = document.getElementById('Bonus')
-let threeKind = document.getElementById('3-Kind')
-let fourKind = document.getElementById('4-Kind')
-let fullHouse = document.getElementById('Full-House')
-let smallStraight = document.getElementById('small-Straight')
-let largeStraight = document.getElementById('large-Straight')
-let yatzee = document.getElementById('Yatzee')
-let chance = document.getElementById('Chance')
-// Add event listner here 
-let yatzeeBonus = document.getElementById('Extra-Yatzee')
-let totalScore = document.getElementById('total-score')
+let countBonus = acesCount.textContent + twosCount.textContent + threesCount +fivesCount + fivesCount + sixesCount.textContent
+
+let threeKindCount = document.getElementById('3-Kind')
+let fourKindCount = document.getElementById('4-Kind')
+let fullHouseCount = document.getElementById('Full-House')
+let smallStraightCount = document.getElementById('small-Straight')
+let largeStraightCount = document.getElementById('large-Straight')
+let yatzeeCount = document.getElementById('Yatzee')
+let chanceCount = document.getElementById('Chance')
+chanceCount.addEventListener('click', () => {
+    chance = false
+    chanceCount.style.backgroundColor = 'red'
+})
+let yatzeeBonusCount = document.getElementById('Extra-Yatzee')
+let totalScoreCount = document.getElementById('total-score')
 
 let aces = true
 let twos = true
@@ -58,35 +63,51 @@ function ScoreCard(dieInHand) {
     let countFours = 0
     let countFives = 0
     let countSixes = 0
+    let countBonus = 0
+
     for ( let i = 0; i < dieInHand.length; i++) {
         if (dieInHand[i] === 1 && aces !== false) {
             countAces += dieInHand[i]
             acesCount.textContent = countAces
+            countAces += countBonus
         } else 
         if (dieInHand[i] === 2 && twos !== false) {
             countTwos += dieInHand[i]
             twosCount.textContent = countTwos
+            countTwos += countBonus
         } else
         if (dieInHand[i] === 3 && threes !== false) {
             countThrees += dieInHand[i]
             threesCount.textContent = countThrees
+            countThrees += countBonus
         } else
         if (dieInHand[i] === 4 && fours !== false) {
             countFours += dieInHand[i]
             foursCount.textContent = countFours
+            countFours += countBonus
         } else
         if (dieInHand[i] === 5 && fives !== false) {
             countFives += dieInHand[i]
             fivesCount.textContent = countFives
+            countFives += countBonus
         } else
         if (dieInHand[i] === 6 && sixes !== false) {
             countSixes += dieInHand[i]
             sixesCount.textContent = countSixes
-        }
+            countSixes += countBonus
+            console.log(countBonus)
+        }        
     }
-    
+    if ( countBonus > 63 ) {
+        bonus.textContent = 35
+        
+    } 
+            
 
-    chance.textContent = dieInHand.reduce((a, b) => a + b, 0)
+    if (chance !== false) {
+        chanceCount.textContent = dieInHand.reduce((a, b) => a + b, 0)
+    }
+        
     
 
 }
