@@ -144,7 +144,7 @@ table, th, td {
     color: navy;
     margin: auto;
     padding: 20px;
-    border: 10px groove #888;
+    border: 1px groove #888;
     border-radius: 20px;
     width: 80%;
     display: grid;
@@ -171,7 +171,7 @@ table, th, td {
     color: navy;
     margin: auto;
     padding: 20px;
-    border: 10px groove #888;
+    border: 1px groove #888;
     border-radius: 20px;
     width: 80%;
     display: grid;
