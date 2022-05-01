@@ -14,6 +14,7 @@ I have been asked to make a game that would showcase what I've learned in the la
   This game must be tracked in GitHub, with a minimum on 10 commits
   Ideally, put your empty project up on GitHub on day one of development and aim for multiple commits per day
   This game must be deployed on GitHub Pages or another location
+</br>
 ~Game Requirements------------></br>
   This game can be designed for 2 or more players (PvP) or 1 player (PvE)
     The second player in a PvP game can be a person or an AI
@@ -25,10 +26,12 @@ I have been asked to make a game that would showcase what I've learned in the la
   Effort must be spent on styling and appearance
   The HTML code should use sematic tags
   The game should have a Readme.md file in the GitHub repository that describes the inspiration for the game, explains the controls and how to play the game, lists the       technologies used to build the game, and addresses any outstanding bugs or unfinished functionality
+</br>
 ~Bonus Ideas------------></br>
   Make persistent scores in your browser's localStorage
   Add interesting music or sound effects to your game
-<Deliverables></br>
+</br>
+<Deliverables>
   -----------
   A link to your game, which is deployed somewhere on the internet
   A link to your GitHub repository, so we can see the progress on your game
