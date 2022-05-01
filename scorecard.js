@@ -48,8 +48,20 @@ fullHouseCount.addEventListener('click', () => {
     fullHouseCount.style.backgroundColor = 'red'
 })
 let smallStraightCount = document.getElementById('small-Straight')
+smallStraightCount.addEventListener('click', () => {
+    smStriaght = false
+    smallStraightCount.style.backgroundColor = 'red'
+})
 let largeStraightCount = document.getElementById('large-Straight')
-let yatzeeCount = document.getElementById('Yatzee')
+largeStraightCount.addEventListener('click', () => {
+    lgStraight = false
+    largeStraightCount.style.backgroundColor = 'red'
+})
+let yahtzeeCount = document.getElementById('Yahtzee')
+yahtzeeCount.addEventListener('click', () => {
+    yahtzee = false
+    yahtzeeCount.style.backgroundColor = 'red'
+})
 let chanceCount = document.getElementById('Chance')
 chanceCount.addEventListener('click', () => {
     chance = false
@@ -72,7 +84,7 @@ let fourKind = true
 let fullHouse = true
 let smStriaght = true
 let lgStraight = true
-
+let yahtzee = true
 let chance = true
 
 function ScoreCard(dieInHand) {
@@ -88,7 +100,7 @@ function ScoreCard(dieInHand) {
     let count4Kind = 0
 
     for ( let i = 0; i < dieInHand.length; i++) {
-        // upper Section
+// Upper Section
         if (dieInHand[i] === 1 && aces !== false) {
             countAces += dieInHand[i]
             acesCount.textContent = countAces
@@ -117,17 +129,19 @@ function ScoreCard(dieInHand) {
         if (dieInHand[i] === 6 && sixes !== false) {
             countSixes += dieInHand[i]
             sixesCount.textContent = countSixes
+            countBonus.push(countSixes)
         } else 
-        // lower Section
+// Lower Section
         if (!count[dieInHand[i]]) {
             count[dieInHand[i]] = 0
             console.log(count)
         } 
+        count[dieInHand[i]] += 1
         // if (dieInHand[i] == dieInHand[i] || dieInHand[i] == dieInHand[i] || dieInHand[i] == dieInHand[i]) {
         //     threeKindCount.textContent = dieInHand.reduce((a, b) => a + b, 0)
         // }     
     }
-    // count[dieInHand[i]] += 1
+    
     let countedBonus = countBonus.reduce((a,b) => a + b, 0)
     // console.log(countedBonus)
     if ( countedBonus > 63 ) {
