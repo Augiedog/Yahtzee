@@ -127,7 +127,7 @@ function ScoreCard(dieInHand) {
         //     threeKindCount.textContent = dieInHand.reduce((a, b) => a + b, 0)
         // }     
     }
-    count[dieInHand[i]] += 1
+    // count[dieInHand[i]] += 1
     let countedBonus = countBonus.reduce((a,b) => a + b, 0)
     // console.log(countedBonus)
     if ( countedBonus > 63 ) {
