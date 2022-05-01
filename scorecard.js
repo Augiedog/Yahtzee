@@ -46,6 +46,7 @@ chanceCount.addEventListener('click', () => {
 let yatzeeBonusCount = document.getElementById('Extra-Yatzee')
 let totalScoreCount = document.getElementById('total-score')
 
+// writes score in 
 let aces = true
 let twos = true
 let threes = true
@@ -99,7 +100,6 @@ function ScoreCard(dieInHand) {
     console.log(countedBonus)
     if ( countedBonus > 63 ) {
         bonus.textContent = 35
-        
     } 
             
 
