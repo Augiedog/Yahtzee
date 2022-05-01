@@ -27,7 +27,6 @@ fivesCount.addEventListener('click', () => {
 let sixesCount = document.getElementById('Sixes-Count')
 sixesCount.addEventListener('click', () => {
     sixes = false
-    countBonus.push(countSixes)
     sixesCount.style.backgroundColor = 'red'
 })
 let bonus = document.getElementById('Bonus')

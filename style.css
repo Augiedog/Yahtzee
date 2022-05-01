@@ -9,6 +9,9 @@ body {
 }
 h1 {
   font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+  margin: 0em;
+
 }
 h2 {
     font-family: 'Poppins', sans-serif;
@@ -127,7 +130,7 @@ table, th, td {
     display: none; 
     position: fixed; 
     z-index: 1;
-    padding-top: 30px; 
+    padding-top: 20px; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -153,7 +156,7 @@ table, th, td {
     display: none; 
     position: fixed; 
     z-index: 1;
-    padding-top: 30px; 
+    padding-top: 20px; 
     left: 0;
     top: 0;
     width: 100%; 
