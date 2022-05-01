@@ -33,8 +33,20 @@ let bonus = document.getElementById('Bonus')
 let countBonus = []
 
 let threeKindCount = document.getElementById('3-Kind')
+threeKindCount.addEventListener('click', () => {
+    threeKind = false
+    threeKindCount.style.backgroundColor = 'red'
+})
 let fourKindCount = document.getElementById('4-Kind')
+fourKindCount.addEventListener('click', () => {
+    fourKind = false
+    fourKindCount.style.backgroundColor = 'red'
+})
 let fullHouseCount = document.getElementById('Full-House')
+fullHouseCount.addEventListener('click', () => {
+    fullHouse = false
+    fullHouseCount.style.backgroundColor = 'red'
+})
 let smallStraightCount = document.getElementById('small-Straight')
 let largeStraightCount = document.getElementById('large-Straight')
 let yatzeeCount = document.getElementById('Yatzee')
@@ -47,12 +59,19 @@ let yatzeeBonusCount = document.getElementById('Extra-Yatzee')
 let totalScoreCount = document.getElementById('total-score')
 
 // writes score in 
+// upper Section
 let aces = true
 let twos = true
 let threes = true
 let fours = true
 let fives = true
 let sixes = true
+// lower Section
+let threeKind = true
+let fourKind = true
+let fullHouse = true
+let smStriaght = true
+let lgStraight = true
 
 let chance = true
 
@@ -64,8 +83,12 @@ function ScoreCard(dieInHand) {
     let countFours = 0
     let countFives = 0
     let countSixes = 0
+    let count = {}
+    let count3Kind = 0
+    let count4Kind = 0
 
     for ( let i = 0; i < dieInHand.length; i++) {
+        // upper Section
         if (dieInHand[i] === 1 && aces !== false) {
             countAces += dieInHand[i]
             acesCount.textContent = countAces
@@ -94,10 +117,19 @@ function ScoreCard(dieInHand) {
         if (dieInHand[i] === 6 && sixes !== false) {
             countSixes += dieInHand[i]
             sixesCount.textContent = countSixes
-        }        
+        } else 
+        // lower Section
+        if (!count[dieInHand[i]]) {
+            count[dieInHand[i]] = 0
+            console.log(count)
+        } 
+        // if (dieInHand[i] == dieInHand[i] || dieInHand[i] == dieInHand[i] || dieInHand[i] == dieInHand[i]) {
+        //     threeKindCount.textContent = dieInHand.reduce((a, b) => a + b, 0)
+        // }     
     }
+    count[dieInHand[i]] += 1
     let countedBonus = countBonus.reduce((a,b) => a + b, 0)
-    console.log(countedBonus)
+    // console.log(countedBonus)
     if ( countedBonus > 63 ) {
         bonus.textContent = 35
     } 

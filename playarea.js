@@ -5,7 +5,7 @@ let dieInHand = []
 
 function Dice(diceVal) {
     let image = document.createElement('img')
-    image.src = `./dice${diceVal}.png`
+    image.src = `./images/dice${diceVal}.png`
     image.alt = `Dice side ${diceVal} `
     image.id = 'Dice'
     image.className = 'play-dice'
@@ -14,7 +14,7 @@ function Dice(diceVal) {
         dieInHand.push(diceVal)
         ScoreCard(dieInHand)
         let inventoryItem = document.createElement('img')
-        inventoryItem.src = `./dice${diceVal}.png`;
+        inventoryItem.src = `./images/dice${diceVal}.png`;
         inventoryItem.alt = `Dice side ${diceVal}`
         inventoryItem.id = 'Dice'
         inventoryItem.addEventListener('click', () => {
@@ -37,10 +37,9 @@ function removeDieValue(val) {
         }
     }
 }
-
+// makes sure only 5 dice are in play
 function diceCount() {
     var diceLimit = 5
-    // document.querySelector('#total-score').textContent = dice
     if (dice > diceLimit) {
         alert(`You have more than 5 dice in Play!!`)
     } 
@@ -70,7 +69,7 @@ let hpbtn = document.getElementById('howtobut')
 hpbtn.onclick = function() {
   howtomodal.style.display = "block"
 }
-//Get the  'About' modal
+//Get the 'About' modal
 let aboutmodal = document.getElementById('About')
 let abbtn = document.getElementById('aboutbut')
 abbtn.onclick = function() {

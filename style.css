@@ -47,7 +47,7 @@ button {
     background: linear-gradient(to bottom left, #5FABC5, white);
 }
 #aboutbut:hover {
-    background: linear-gradient(to bottom left, green, yellow);
+    background: linear-gradient(to bottom left, #30db30, yellow);
 }
 
 header {
@@ -144,7 +144,8 @@ table, th, td {
     color: navy;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 10px groove #888;
+    border-radius: 20px;
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -170,7 +171,8 @@ table, th, td {
     color: navy;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 10px groove #888;
+    border-radius: 20px;
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
