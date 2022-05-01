@@ -5,7 +5,7 @@ let dieInHand = []
 
 function Dice(diceVal) {
     let image = document.createElement('img')
-    image.src = `./images/dice${diceVal}.png`
+    image.src = `./assets/dice${diceVal}.png`
     image.alt = `Dice side ${diceVal} `
     image.id = 'Dice'
     image.className = 'play-dice'
@@ -14,7 +14,7 @@ function Dice(diceVal) {
         dieInHand.push(diceVal)
         ScoreCard(dieInHand)
         let inventoryItem = document.createElement('img')
-        inventoryItem.src = `./images/dice${diceVal}.png`;
+        inventoryItem.src = `./assets/dice${diceVal}.png`;
         inventoryItem.alt = `Dice side ${diceVal}`
         inventoryItem.id = 'Dice'
         inventoryItem.addEventListener('click', () => {
