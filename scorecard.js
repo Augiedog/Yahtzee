@@ -85,7 +85,6 @@ let fullHouse = true
 let smStriaght = true
 let lgStraight = true
 let yahtzee = true
-
 let chance = true
 
 function ScoreCard(dieInHand) {
@@ -101,7 +100,7 @@ function ScoreCard(dieInHand) {
     let count4Kind = 0
 
     for ( let i = 0; i < dieInHand.length; i++) {
-        // upper Section
+// Upper Section
         if (dieInHand[i] === 1 && aces !== false) {
             countAces += dieInHand[i]
             acesCount.textContent = countAces
@@ -132,7 +131,7 @@ function ScoreCard(dieInHand) {
             sixesCount.textContent = countSixes
             countBonus.push(countSixes)
         } else 
-        // lower Section
+// Lower Section
         if (!count[dieInHand[i]]) {
             count[dieInHand[i]] = 0
             console.log(count)
