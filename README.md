@@ -1,4 +1,4 @@
-# Yahtzee
+# Welcome to Yahtzee
 
 Milestone Project 1: Browser Game</br>
 Hello and Welcome to my Yahtzee Browser Game
