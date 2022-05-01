@@ -30,7 +30,7 @@ sixesCount.addEventListener('click', () => {
     sixesCount.style.backgroundColor = 'red'
 })
 let bonus = document.getElementById('Bonus')
-let countBonus = acesCount.textContent + twosCount.textContent + threesCount +fivesCount + fivesCount + sixesCount.textContent
+let countBonus = []
 
 let threeKindCount = document.getElementById('3-Kind')
 let fourKindCount = document.getElementById('4-Kind')
@@ -68,29 +68,36 @@ function ScoreCard(dieInHand) {
         if (dieInHand[i] === 1 && aces !== false) {
             countAces += dieInHand[i]
             acesCount.textContent = countAces
+            countBonus.push(countAces)
         } else 
         if (dieInHand[i] === 2 && twos !== false) {
             countTwos += dieInHand[i]
             twosCount.textContent = countTwos
+            countBonus.push(countTwos)
         } else
         if (dieInHand[i] === 3 && threes !== false) {
             countThrees += dieInHand[i]
             threesCount.textContent = countThrees
+            countBonus.push(countThrees)
         } else
         if (dieInHand[i] === 4 && fours !== false) {
             countFours += dieInHand[i]
             foursCount.textContent = countFours
+            countBonus.push(countFours)
         } else
         if (dieInHand[i] === 5 && fives !== false) {
             countFives += dieInHand[i]
             fivesCount.textContent = countFives
+            countBonus.push(countFives)
         } else
         if (dieInHand[i] === 6 && sixes !== false) {
             countSixes += dieInHand[i]
             sixesCount.textContent = countSixes
         }        
     }
-    if ( countBonus > 63 ) {
+    let countedBonus = countBonus.reduce((a,b) => a + b, 0)
+    console.log(countedBonus)
+    if ( countedBonus > 63 ) {
         bonus.textContent = 35
         
     } 
