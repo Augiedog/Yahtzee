@@ -88,6 +88,7 @@ let yahtzee = true
 let chance = true
 
 function ScoreCard(dieInHand) {
+    dieInHand.sort(function(a, b){return a - b});
     // need to fill the Score Card
     let countAces = 0
     let countTwos = 0
@@ -100,7 +101,7 @@ function ScoreCard(dieInHand) {
     let count4Kind = 0
 
     for ( let i = 0; i < dieInHand.length; i++) {
-// Upper Section
+    // Upper Section
         if (dieInHand[i] === 1 && aces !== false) {
             countAces += dieInHand[i]
             acesCount.textContent = countAces
@@ -131,28 +132,42 @@ function ScoreCard(dieInHand) {
             sixesCount.textContent = countSixes
             countBonus.push(countSixes)
         } else 
-// Lower Section
+        // Lower Section
+        // This is 3kind, 4 kind, Yahtzee -----bugs
         if (!count[dieInHand[i]]) {
             count[dieInHand[i]] = 0
-            console.log(count)
+            // console.log(count)
         } 
         count[dieInHand[i]] += 1
         // if (dieInHand[i] == dieInHand[i] || dieInHand[i] == dieInHand[i] || dieInHand[i] == dieInHand[i]) {
         //     threeKindCount.textContent = dieInHand.reduce((a, b) => a + b, 0)
-        // }     
+        // }
+        // This is Full House ------bugs
+        if ((dieInHand[0] === dieInHand[1])&&(dieInHand[2] === dieInHand[4])) {
+            console.log(dieInHand[i])
+            fullHouseCount.textContent = 25
+        } else if ((dieInHand[0] === dieInHand[1]&&dieInHand[3] === dieInHand[4])) {
+            fullHouseCount.textContent = 25
+        }     
     }
-    
+    // This is Bonus of the Upper Section ------bugs
     let countedBonus = countBonus.reduce((a,b) => a + b, 0)
     // console.log(countedBonus)
     if ( countedBonus > 63 ) {
         bonus.textContent = 35
-    } 
-            
-
+    }       
+    // This is Chance ===== WORKS DON'T MOVE
     if (chance !== false) {
         chanceCount.textContent = dieInHand.reduce((a, b) => a + b, 0)
     }
-        
-    
+}    
+    // function countFullHouse() {
+    //     if ((dieInHand[0] === dieInHand[1])&&(dieInHand[2] === dieInHand[4])) {
+    //         console.log(dieInHand[i])
+    //         fullHouseCount.textContent = 25
+    //     } else if ((dieInHand[0] === dieInHand[1]&&dieInHand[3] === dieInHand[4])) {
+    //         fullHouseCount.textContent = 25
+    //     }    
+    // }
+    // countFullHouse()
 
-}
