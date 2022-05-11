@@ -18,6 +18,11 @@ h2 {
     text-align: left;
     line-height: 2;
 }
+sub {
+  font-family: 'Mulish', sans-serif;
+  text-align: justify;
+  
+}
 p {
     text-align: justify;
     text-indent: 30px;
