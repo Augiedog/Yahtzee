@@ -1,6 +1,8 @@
+@import "config";
+/* Button */
 button {
     font-size: 1.5em;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-Poppins;
     margin-right: 10px;
     border-radius: 10px;
 }

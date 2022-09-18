@@ -1,3 +1,4 @@
+// @import "config";
 /* Models */
 // Sets positon of Model
 $models: (".howto", ".about-game");
@@ -21,7 +22,7 @@ $modelSettings: (".directions", ".aboutmkr");
 @each $setting in $modelSettings {
     #{$setting} {
     background-color: #fefefe;
-    color: navy;
+    color: $model-font-color;
     margin: auto;
     padding: 20px;
     border: 1px groove #888;

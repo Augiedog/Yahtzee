@@ -1,4 +1,4 @@
-@import "utilities", "button", "model";
+@import "config", "button", "model","utilities";
 html,
 body {
     margin: 0;
@@ -9,18 +9,18 @@ body {
     /* font-family: 'Mulish', sans-serif; */
 }
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-Poppins;
   font-size: 60px;
   margin: 0em;
 
 }
 h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-Poppins;
     text-align: left;
     line-height: 2;
 }
 sub {
-  font-family: 'Mulish', sans-serif;
+  font-family: $font-Mulish;
   text-align: justify;
   
 }
@@ -29,13 +29,13 @@ p {
     text-indent: 30px;
     line-height: 2;
     font-size: large;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-Mulish;
 }
 header {
     width: 85%;
     margin: 0 auto;
-    background-color: #45433C;
-    border: 10px solid #5FABC5;
+    background-color: $secondary-color;
+    border: 10px solid $second-border-color;
     border-radius: 25px;
     text-align: center;
     margin-top: 5px;
@@ -48,7 +48,7 @@ header {
     vertical-align: 150px;
     margin: 0 auto;
     background-color: #F7D928;
-    border: 10px groove #ab0f0c;
+    border: 10px groove $first-border-color;
     display: flex;
     min-height: 100vh;
     justify-content: stretch;
@@ -71,7 +71,7 @@ header {
 }
 #hand {
     border-radius: 25px;
-    background-color: #45433C;
+    background-color: $secondary-color;
     width: 50%;
     max-height: 100px;
     position: absolute;
@@ -88,12 +88,15 @@ img {
     margin: .5vw;
 }
 img:hover {
-    border: 5px solid #ab0f0c;
+    border: 5px solid $first-border-color;
     border-radius: 10px;
 }
 #play-area > img {
     animation: rollDice;
     animation-duration: 1s;
+    
+    justify-content: center;
+    align-items: center;
 }  
 main {
     box-sizing: border-box; 
@@ -107,3 +110,22 @@ table, th, td {
     font-weight: bold;
 }
 
+@media (min-width: 600px) {
+    .wrapper {
+      flex-direction: row;
+    }
+    #play-area {
+      width: 80%;
+      flex: 4;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1em;
+      margin-bottom: 10em;
+    }
+    #hand {
+      height: 25%;
+    }
+    main {
+      flex: 2;
+    }
+}

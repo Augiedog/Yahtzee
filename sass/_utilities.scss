@@ -1,3 +1,4 @@
+/* Utilties */
 @function text-color-picker($color) {
     @if(lightness($color) > 70) {
       @return black;
@@ -12,29 +13,11 @@
     color: text-color-picker($color)
   }
 
-  
+
   @keyframes rollDice {
     0% {transform: rotate(20deg); transform-origin: 20% 40%}
     20% {transform: rotate(90deg); width: max-content}
     50% {transform: rotate(-180deg); transform-origin: 40% 20%;}
     75% {transform: rotate(270deg)}
     100% {transform: rotate(360deg); transform-origin: 60% 30%;}
-}
-
-@media (min-width: 600px) {
-    .wrapper {
-      flex-direction: row;
-    }
-    #play-area {
-      width: 80%;
-      flex: 4;
-      align-items: center;
-      margin-right: 1em;
-    }
-    #hand {
-      height: 25%;
-    }
-    main {
-      flex: 2;
-    }
 }
