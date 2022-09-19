@@ -40,7 +40,7 @@ header {
     text-align: center;
     margin-top: 5px;
     vertical-align: 150px;
-    color: #EFECE6;
+    color: $tertiary-color;
 }
 .container {
     width: 95%;
@@ -104,7 +104,7 @@ main {
 }
 table, th, td {
     border: 1px groove rebeccapurple;
-    background-color: #EFECE6;
+    background-color: $tertiary-color;
     margin: 0 auto;
     padding: .5px;
     font-weight: bold;
