@@ -1,11 +1,10 @@
-@import "config", "button", "model","utilities";
+@import "config", "button", "model", "utilities";
 html,
 body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #000000;
-    color: #000000;
+    @include set-background(#000000);
     /* font-family: 'Mulish', sans-serif; */
 }
 h1 {
@@ -35,7 +34,7 @@ header {
     width: 85%;
     margin: 0 auto;
     background-color: $secondary-color;
-    border: 10px solid $second-border-color;
+    border: 10px $second-border-style $second-border-color;
     border-radius: 25px;
     text-align: center;
     margin-top: 5px;
@@ -48,7 +47,7 @@ header {
     vertical-align: 150px;
     margin: 0 auto;
     background-color: $primary-color;
-    border: 10px groove $first-border-color;
+    border: 10px $first-border-style $first-border-color;
     display: flex;
     min-height: 100vh;
     justify-content: stretch;
@@ -88,7 +87,7 @@ img {
     margin: .5vw;
 }
 img:hover {
-    border: 5px solid $first-border-color;
+    border: 5px $second-border-style $first-border-color;
     border-radius: 10px;
 }
 #play-area > img {
@@ -104,10 +103,10 @@ main {
 }
 table, th, td {
     border: 1px groove rebeccapurple;
-    background-color: $tertiary-color;
     margin: 0 auto;
     padding: .5px;
     font-weight: bold;
+    @include set-background($tertiary-color)
 }
 
 @media (min-width: 600px) {

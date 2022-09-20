@@ -1,5 +1,5 @@
 /* Button */
-button {
+#aboutbut:hover, #aboutbut, #howtobut:hover, #howtobut, #roll:hover, #roll {
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
   margin-right: 10px;
@@ -133,7 +133,7 @@ body {
   padding: 0;
   text-align: center;
   background-color: #000000;
-  color: #000000;
+  color: white;
   /* font-family: 'Mulish', sans-serif; */
 }
 
@@ -242,10 +242,11 @@ main {
 
 table, th, td {
   border: 1px groove rebeccapurple;
-  background-color: #EFECE6;
   margin: 0 auto;
   padding: 0.5px;
   font-weight: bold;
+  background-color: #EFECE6;
+  color: black;
 }
 
 @media (min-width: 600px) {

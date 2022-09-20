@@ -1,26 +1,37 @@
 @import "config";
 /* Button */
-button {
+$background-static: linear-gradient(to bottom left, #5FABC5, white);
+$background-roll: linear-gradient(to bottom left,  #FAA613, #A10702);
+$background-hotobut: linear-gradient(to bottom left, #2d2ddf, #30db30);
+$background-about: linear-gradient(to bottom left, #30db30, yellow);
+
+%button {
     font-size: 1.5em;
     font-family: $font-Poppins;
     margin-right: 10px;
     border-radius: 10px;
 }
 #roll {
-    background: linear-gradient(to bottom left, #5FABC5, white);
+    @extend %button;
+    background: $background-static;
 }
 #roll:hover {
-    background: linear-gradient(to bottom left,  #FAA613, #A10702);
+    @extend %button;
+    background: $background-roll;
 }
 #howtobut {
-    background: linear-gradient(to bottom left, #5FABC5, white);
+    @extend %button;
+    background: $background-static;
 }
 #howtobut:hover {
-    background: linear-gradient(to bottom left, #2d2ddf, #30db30);
+    @extend %button;
+    background: $background-hotobut;
 }
 #aboutbut {
-    background: linear-gradient(to bottom left, #5FABC5, white);
+    @extend %button;
+    background: $background-static;
 }
 #aboutbut:hover {
-    background: linear-gradient(to bottom left, #30db30, yellow);
+    @extend %button;
+    background: $background-about;
 }

@@ -7,8 +7,7 @@
     }
   }
   
-  
-  @mixin set-bg($color) {
+  @mixin set-background($color) {
     background-color: $color;
     color: text-color-picker($color)
   }
